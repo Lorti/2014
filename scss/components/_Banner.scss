@@ -1,0 +1,38 @@
+/**
+ * BANNER
+ * @author office@manuelwieser.com
+ *
+ * <div class="Banner">
+ *   <div class="Banner-logo">
+ *     <img src="{{logo}}.svg">
+ *     <img src="{{logo}}.png">
+ *   </div>
+ *   <h1 class="Banner-heading">{{heading}}</h1>
+ *   <p class="Banner-tagline">{{tagline}}</p>
+ * </div>
+ */
+
+.Banner {}
+
+.Banner-heading {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: $baseFontSize * pow($modularScale, 4);
+  line-height: $baseLineHeight * 2.5;
+  margin-bottom: $baseLineHeight * 2;
+}
+
+.Banner-tagline {
+  margin-top: -$baseLineHeight * 2.5;
+}
+
+.Banner-logo {
+  float: left;
+  line-height: $baseLineHeight * 2.5;
+  img {
+    vertical-align: middle;
+    margin-right: $baseLineHeight * 0.5;
+    width: $baseLineHeight * 3.5;
+    height: $baseLineHeight * 3.5 / $logoAspectRatio;
+  }
+}

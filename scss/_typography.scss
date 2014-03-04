@@ -1,0 +1,80 @@
+/**
+ * TYPOGRAPHY
+ * @author office@manuelwieser.com
+ */
+
+html { font-size: 100%; }
+body {
+  margin: $baseLineHeight;
+  background: $baseBackgroundColor;
+  color: $baseColor;
+  font-size: $baseFontSize;
+  font-family: "Lato", sans-serif;
+  line-height: strip-unit($baseLineHeight);
+}
+
+h1, h2, h3 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  margin-top: $baseLineHeight * 2;
+  margin-bottom: $baseLineHeight;
+}
+h1 {
+  font-size: $baseFontSize * pow($modularScale, 3);
+  line-height: $baseLineHeight * 1.5;
+}
+h2 {
+  font-size: $baseFontSize * pow($modularScale, 2);
+  line-height: $baseLineHeight * 1.5;
+}
+h3 {
+  font-size: $baseFontSize * $modularScale;
+  line-height: $baseLineHeight;
+}
+
+p, ul, ol, pre, blockquote {
+  margin-top: $baseLineHeight;
+  margin-bottom: $baseLineHeight;
+}
+small, aside {
+  font-size: $baseLineHeight * 0.5;
+}
+p + p {
+  margin-top: -$baseLineHeight;
+  text-indent: $baseFontSize;
+}
+
+a:link,
+a:visited {
+  color: $highlightColor;
+  text-decoration: none;
+}
+a:hover,
+a:active { color: desaturate($highlightColor, 100%); }
+
+strong { font-weight: bold; }
+em { font-style: italic; }
+pre, code { font-family: Consolas, Monaco, monospace; }
+
+ul { list-style: disc outside; }
+ol { list-style: decimal outside; }
+ul, ol { padding-left: $baseLineHeight; }
+
+blockquote {
+  padding-left: $baseLineHeight;
+  padding-right: $baseLineHeight;
+  [lang="de"] &,
+  &[lang="de"] {
+    p:first-of-type:before { content: $character-ldquo-de; }
+    p:last-of-type:after { content: $character-rdquo-de; }
+  }
+  [lang="en"] &,
+  &[lang="en"] {
+    p:first-of-type:before { content: $character-ldquo-en; }
+    p:last-of-type:after { content: $character-rdquo-en; }
+  }
+  footer {
+    text-align: right;
+    margin-top: -$baseLineHeight;
+  }
+}

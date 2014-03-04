@@ -1,0 +1,24 @@
+/**
+ * INTRODUCTION
+ * @author office@manuelwieser.com
+ *
+ * <div class="Introduction">
+ * </div>
+ */
+
+.Introduction {
+  background-color: $highlightColor;
+  background-image: linear-gradient(
+                      to left,
+                      rgba($highlightColor, 0.75),
+                      rgba($highlightColor, 1)
+                      ),
+                    url(http://placekitten.com/g/200/300);
+  background-position: center;
+  background-size: cover;
+  color: white;
+  font-size: $baseFontSize * $modularScale;
+  margin-left: -$baseLineHeight;
+  margin-right: -$baseLineHeight;
+  padding: $baseLineHeight;
+}

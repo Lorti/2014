@@ -1,0 +1,30 @@
+/**
+ * PHOTOSET
+ * @author office@manuelwieser.com
+ * https://medium.com/coding-design/7742e6f93d9e
+ *
+ * <div class="Photoset">
+ *   <div class="Photoset-row">
+ *     <figure class="Photoset-item">
+ *        <img src="{{image}}">
+ *     </figure>
+ *   </div>
+ * </div>
+ */
+
+.Photoset a,
+.Photoset img { display: block; }
+
+.s-active .Photoset-row {
+  overflow: hidden;
+  margin-bottom: .5rem;
+  &:last-child { margin-bottom: 0; }
+}
+
+.s-active .Photoset-item {
+  display: block;
+  float: left;
+  margin: 0 .25rem;
+  &:first-child { margin-left: 0; }
+  &:last-child { margin-right: 0; }
+}

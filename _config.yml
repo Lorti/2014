@@ -1,0 +1,18 @@
+encoding:         UTF-8
+name:             'Manuel Wieser – Front-End Developer & Digital Artist'
+markdown:         kramdown
+pygments:         false
+exclude:          [
+                    '.sass-cache',
+                    'node_modules',
+                    'ai',
+                    'scss',
+                    'psd',
+                    'Gruntfile.js',
+                    'package.json',
+                    '*.sublime-project',
+                    '*.sublime-workspace',
+                    '*.bat',
+                    '*.map',
+                    '*.zip'
+                  ]

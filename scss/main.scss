@@ -1,0 +1,33 @@
+/**
+ * http://www.manuelwieser.com/
+ * @author office@manuelwieser.com
+ */
+
+@import "variables";
+@import "functions";
+@import "mixins";
+
+@import "reset";
+@import "typography";
+
+@import "utilities";
+
+/**
+ * Components
+ * https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md
+ */
+@import "components/Banner";
+@import "components/Introduction";
+@import "components/Photoset";
+
+/**
+ * Microformats
+ * http://microformats.org/wiki/microformats2
+ */
+
+.h-resume {
+  .p-summary {
+    font-size: $baseFontSize * $modularScale;
+    line-height: $baseLineHeight * 1.25;
+  }
+}
