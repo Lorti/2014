@@ -31,9 +31,6 @@ module.exports = function (grunt) {
 	    }
 	  },
 	  jekyll: {
-	    options: {
-	        bundleExec: true
-	    },
 	    build: {
 	      options: {
 	        dest: '_site/',
