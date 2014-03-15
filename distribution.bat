@@ -1,1 +1,0 @@
-jekyll build --config _build.yml

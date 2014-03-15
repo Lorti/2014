@@ -4,6 +4,7 @@ module.exports = function (grunt) {
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
+
 		autoprefixer: {
 	    options: {
 	    	browsers: ['last 3 versions'],
@@ -14,9 +15,26 @@ module.exports = function (grunt) {
       	dest: 'css/main.css'
 	    },
 	  },
+
 	  clean: {
       target: ['build']
     },
+
+    concurrent: {
+    	target: ['watch', 'connect']
+    },
+
+    connect: {
+    	server: {
+    		options: {
+    			port: 4000,
+    			base: '_site',
+    			keepalive: true,
+    			livereload: true
+    		}
+    	}
+    },
+
 		imagemin: {
 	    target: {
 	    	options: {
@@ -24,20 +42,28 @@ module.exports = function (grunt) {
 	    	},
 	      files: [{
 	        expand: true,
-	        cwd: 'build/',
+	        cwd: '_site/',
 	        src: ['**/*.{png,jpg,gif}'],
-	        dest: 'build/'
+	        dest: '_site/'
 	      }]
 	    }
 	  },
+
 	  jekyll: {
-	    build: {
+	  	test: {
 	      options: {
 	        dest: '_site/',
 	        config: '_config.yml'
 	      }
+	    },
+	    build: {
+	      options: {
+	        dest: '_site/',
+	        config: 'build.yml'
+	      }
 	    }
 	  },
+
 		sass: {
 	    target: {
 	      options: {
@@ -49,6 +75,7 @@ module.exports = function (grunt) {
 	      }
 	    }
 	  },
+
 	  svg2png: {
       target: {
         files: [{
@@ -57,6 +84,7 @@ module.exports = function (grunt) {
         }]
       }
     },
+
 		watch: {
 			options: {
 				livereload: true
@@ -66,21 +94,21 @@ module.exports = function (grunt) {
 				tasks: ['sass', 'autoprefixer']
 			},
 			html: {
-				files: ['_layouts/*', '_posts/*', '*.markdown'],
-				tasks: ['jekyll']
+				files: ['_layouts/**', '_posts/**', 'css/**', 'js/**', '*.markdown'],
+				tasks: ['jekyll:test']
 			}
 		}
 	});
 
 	require('load-grunt-tasks')(grunt);
 
-	grunt.registerTask('default', ['watch']);
+	grunt.registerTask('default', ['concurrent']);
 	grunt.registerTask('build', [
 		'clean',
 		'sass',
 		'autoprefixer',
 		'svg2png',
-		'jekyll',
+		'jekyll:build',
 		'imagemin'
 	]);
 

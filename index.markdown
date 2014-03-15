@@ -23,9 +23,15 @@ Yes, [you can hire me][contact] to create your websites, games and digital art.
 
 ### Websites
 
-<ul class="posts">
-  {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+<ul class="Works">
+  {% for post in site.categories.website %}
+    <li>
+      <p><img src="{{ post.picture }}" alt="{{ post.title }}"></p>
+      <p>{{ post.categories }}</p>
+      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      <p>{{ post.excerpt }}</p>
+      <p><a href="{{ post.link }}">{{ post.link }}</a></p>
+    </li>
   {% endfor %}
 </ul>
 
