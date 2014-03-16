@@ -1,8 +1,19 @@
+/*------------------------------------*\
+    $UTILITIES
+\*------------------------------------*/
 /**
- * UTILITIES
- * @author office@manuelwieser.com
- * https://github.com/suitcss/utils
+ * $DISPLAY......Display utilities
+ * $SIZE.........Size utilities
+ *
+ * These are taken from https://github.com/suitcss/utils 
+ * and change certain traits of an element.
  */
+
+
+
+/*------------------------------------*\
+    $DISPLAY
+\*------------------------------------*/
 
 .u-inline { display: inline !important; }
 .u-inlineBlock { display: inline-block !important; }
@@ -11,6 +22,10 @@
 .u-tableCell { display: table-cell !important; }
 
 
+
+/*------------------------------------*\
+    $SIZE
+\*------------------------------------*/
 
 .u-sizeFit,
 .u-sizeFitAlt {
@@ -39,8 +54,6 @@
   display: block !important;
   width: 100% !important;
 }
-
-
 
 .u-size1of12 {
   width: 8.333% !important;

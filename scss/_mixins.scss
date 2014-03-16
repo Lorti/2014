@@ -1,7 +1,6 @@
-/**
- * MIXINS
- * @author office@manuelwieser.com
- */
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
 
 @function strip-unit($number) {
   @return $number / ($number * 0 + 1);

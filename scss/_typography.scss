@@ -1,13 +1,12 @@
-/**
- * TYPOGRAPHY
- * @author office@manuelwieser.com
- */
+/*------------------------------------*\
+    $TYPOGRAPHY
+\*------------------------------------*/
 
 html { font-size: 100%; }
 body {
   margin: $baseLineHeight;
-  background: $baseBackgroundColor;
-  color: $baseColor;
+  background: $backgroundColor;
+  color: $textColor;
   font-size: $baseFontSize;
   font-family: "Lato", sans-serif;
   line-height: strip-unit($baseLineHeight);
@@ -46,11 +45,11 @@ p + p {
 
 a:link,
 a:visited {
-  color: $highlightColor;
+  color: $myColor;
   text-decoration: none;
 }
 a:hover,
-a:active { color: desaturate($highlightColor, 100%); }
+a:active { color: desaturate($myColor, 100%); }
 
 strong { font-weight: bold; }
 em { font-style: italic; }

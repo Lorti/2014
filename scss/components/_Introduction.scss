@@ -1,17 +1,17 @@
+/*------------------------------------*\
+    $INTRODUCTION
+\*------------------------------------*/
 /**
- * INTRODUCTION
- * @author office@manuelwieser.com
- *
  * <div class="Introduction">
  * </div>
  */
 
 .Introduction {
-  background-color: $highlightColor;
+  background-color: $myColor;
   background-image: linear-gradient(
                       to left,
-                      rgba($highlightColor, 0.75),
-                      rgba($highlightColor, 1)
+                      rgba($myColor, 0.75),
+                      rgba($myColor, 1)
                       ),
                     url(http://placekitten.com/g/200/300);
   background-position: center;

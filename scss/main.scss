@@ -1,6 +1,9 @@
-/**
+/*------------------------------------*\
+    $MAIN
+\*------------------------------------*/
+/*!
  * http://www.manuelwieser.com/
- * @author office@manuelwieser.com
+ * office@manuelwieser.com
  */
 
 @import "variables";
@@ -12,16 +15,27 @@
 
 @import "utilities";
 
+
+
+/*------------------------------------*\
+    $COMPONENTS
+\*------------------------------------*/
 /**
- * Components
+ * These follow a naming convention proposed by Nicolas Gallagher.
  * https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md
  */
+
 @import "components/Banner";
 @import "components/Introduction";
 @import "components/Photoset";
 
+
+
+/*------------------------------------*\
+    $MICROFORMATS
+\*------------------------------------*/
 /**
- * Microformats
+ * In the near future these may be replaced by RDFa.
  * http://microformats.org/wiki/microformats2
  */
 

@@ -1,11 +1,7 @@
-/**
- * FUNCTIONS
- * @author office@manuelwieser.com
- */
+/*------------------------------------*\
+    $FUNCTIONS
+\*------------------------------------*/
 
-/**
- * pow($x, $n)
- */
 @function pow($x, $n) {
   $value: 1;
   @if $n >= 0 {
