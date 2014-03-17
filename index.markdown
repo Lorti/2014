@@ -24,13 +24,20 @@ Yes, [you can hire me][contact] to create your websites, games and digital art.
 ### Websites
 
 <ul class="Works">
-  {% for post in site.categories.website %}
+  {% for post in site.posts %}
     <li>
       <p><img src="{{ post.picture }}" alt="{{ post.title }}"></p>
       <p>{{ post.categories }}</p>
-      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      <h2>{{ post.title }}</h2>
       <p>{{ post.excerpt }}</p>
-      <p><a href="{{ post.link }}">{{ post.link }}</a></p>
+
+      {% if post.article %}
+        <p><a href="{{ post.url }}">{{ post.url }}</a></p>
+      {% endif %}
+
+      {% if post.link %}
+        <p><a href="{{ post.link }}">{{ post.link }}</a></p>
+      {% endif %}
     </li>
   {% endfor %}
 </ul>

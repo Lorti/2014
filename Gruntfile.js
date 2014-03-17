@@ -59,7 +59,7 @@ module.exports = function (grunt) {
 	    build: {
 	      options: {
 	        dest: '_site/',
-	        config: 'build.yml'
+	        config: '_build.yml'
 	      }
 	    }
 	  },

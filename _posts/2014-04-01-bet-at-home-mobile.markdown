@@ -4,6 +4,7 @@ title: "bet-at-home.com/mobile"
 date: 2014-01-31 12:00
 categories: Website
 
+article: false
 picture: "http://placehold.it/450x300"
 link: "https://www.bet-at-home.com/mobile/"
 ---
