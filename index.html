@@ -1,0 +1,45 @@
+---
+layout: default
+description: I’m a front-end developer and versatile digital artist. I’m into building websites and creating content for real-time rendering, film and animation. I’m also a bearded hacker making games with my friends.
+---
+
+<section class="Introduction">
+  <strong>Hi, I’m Manuel.</strong><br>
+  I make websites,<br>
+  games and digital art.
+  <a href="#contact">GET IN TOUCH</a>
+</section>
+
+<section>
+  <ul class="Works">
+    {% for post in site.posts %}
+      <li>
+        <p><img src="{{ post.picture }}" alt="{{ post.title }}"></p>
+        <p>{{ post.categories }}</p>
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.excerpt }}</p>
+
+        {% if post.article %}
+          <p><a href="{{ post.url }}">{{ post.url }}</a></p>
+        {% endif %}
+
+        {% if post.link %}
+          <p><a href="{{ post.link }}">{{ post.link }}</a></p>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="h-resume hResume">
+  <h2>Multiple professions</h2>
+  <p class="p-summary summary">
+    I’m a front-end developer and versatile digital artist. I’m into <span class="p-skill skill">building websites</span> and <span class="p-skill skill">creating content for real-time rendering, film and animation</span>. I’m also a bearded hacker <span class="p-skill skill">making games</span> with my friends.
+  </p>
+
+  <h2>Wide range of skills</h2>
+  <p>I speak the language of software engineers, interaction designers and creative directors alike. and Thus I can serve as an important link between teams. Being a multimedia all-rounder you can use my skills in many different fields in the pipeline and I’m eager to learn even more.</p>
+
+  <h2>Available for hire</h2>
+  <p>Yes, you can hire me to create your websites, games, and digital art. Apart from my full-time employment I do freelance work in Linz, Austria. Contact me now and we can start discussing your next project today.</p>
+</section>
