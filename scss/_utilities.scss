@@ -4,6 +4,7 @@
 /**
  * $DISPLAY......Display utilities
  * $SIZE.........Size utilities
+ * $WIDTH........Width utilities
  *
  * These are taken from https://github.com/suitcss/utils 
  * and change certain traits of an element.
@@ -55,91 +56,119 @@
   width: 100% !important;
 }
 
-.u-size1of12 {
-  width: 8.333% !important;
+
+
+/*------------------------------------*\
+    $WIDTHS
+\*------------------------------------*/
+
+$breakpoints: (
+    "smaller" "(min-width: 480px)",
+    "small" "(min-width: 640px)",
+    "medium" "(min-width: 960px)",
+    "large" "(min-width: 1280px)",
+    "larger" "(min-width: 1440px)"
+)!default;
+
+
+@mixin deviceType($namespace: "") {
+
+    /**
+     * Whole
+     */
+    .#{$namespace}u-sizeOneWhole         { width: 100%; }
+
+
+    /**
+     * Halves
+     */
+    .#{$namespace}u-sizeOneHalf          { width: 50%; }
+
+
+    /**
+     * Thirds
+     */
+    .#{$namespace}u-sizeOneThird         { width: 33.333%; }
+    .#{$namespace}u-sizeTwoThirds        { width: 66.666%; }
+
+
+    /**
+     * Fourths
+     */
+    .#{$namespace}u-sizeOneFourth       { width: 25%; }
+    .#{$namespace}u-sizeTwoFourths      { @extend .#{$namespace}u-sizeOneHalf; }
+    .#{$namespace}u-sizeThreeFourths    { width: 75%; }
+
+
+    /**
+     * Fifths
+     */
+    .#{$namespace}u-sizeOneFifth         { width: 20%; }
+    .#{$namespace}u-sizeTwoFifths        { width: 40%; }
+    .#{$namespace}u-sizeThreeFifths      { width: 60%; }
+    .#{$namespace}u-sizeFourFifths       { width: 80%; }
+
+
+    /**
+     * Sixths
+     */
+    .#{$namespace}u-sizeOneSixth         { width: 16.666%; }
+    .#{$namespace}u-sizeTwoSixths        { @extend .#{$namespace}u-sizeOneThird; }
+    .#{$namespace}u-sizeThreeSixths      { @extend .#{$namespace}u-sizeOneHalf; }
+    .#{$namespace}u-sizeFourSixths       { @extend .#{$namespace}u-sizeTwoThirds; }
+    .#{$namespace}u-sizeFiveSixths       { width: 83.333%; }
+
+
+    /**
+     * Eighths
+     */
+    .#{$namespace}u-sizeOneEighth        { width: 12.5%; }
+    .#{$namespace}u-sizeTwoEighths       { @extend .#{$namespace}u-sizeOneFourth; }
+    .#{$namespace}u-sizeThreeEighths     { width: 37.5%; }
+    .#{$namespace}u-sizeFourEighths      { @extend .#{$namespace}u-sizeOneHalf; }
+    .#{$namespace}u-sizeFiveEighths      { width: 62.5%; }
+    .#{$namespace}u-sizeSixEighths       { @extend .#{$namespace}u-sizeThreeFourths; }
+    .#{$namespace}u-sizeSevenEighths     { width: 87.5%; }
+
+
+    /**
+     * Tenths
+     */
+    .#{$namespace}u-sizeOneTenth         { width: 10%; }
+    .#{$namespace}u-sizeTwoTenths        { @extend .#{$namespace}u-sizeOneFifth; }
+    .#{$namespace}u-sizeThreeTenths      { width: 30%; }
+    .#{$namespace}u-sizeFourTenths       { @extend .#{$namespace}u-sizeTwoFifths; }
+    .#{$namespace}u-sizeFiveTenths       { @extend .#{$namespace}u-sizeOneHalf; }
+    .#{$namespace}u-sizeSixTenths        { @extend .#{$namespace}u-sizeThreeFifths; }
+    .#{$namespace}u-sizeSevenTenths      { width: 70%; }
+    .#{$namespace}u-sizeEightTenths      { @extend .#{$namespace}u-sizeFourFifths; }
+    .#{$namespace}u-sizeNineTenths       { width: 90%; }
+
+
+    /**
+     * Twelfths
+     */
+    .#{$namespace}u-sizeOneTwelfth       { width: 8.333%; }
+    .#{$namespace}u-sizeTwoTwelfths      { @extend .#{$namespace}u-sizeOneSixth; }
+    .#{$namespace}u-sizeThreeTwelfths    { @extend .#{$namespace}u-sizeOneFourth; }
+    .#{$namespace}u-sizeFourTwelfths     { @extend .#{$namespace}u-sizeOneThird; }
+    .#{$namespace}u-sizeFiveTwelfths     { width: 41.666% }
+    .#{$namespace}u-sizeSixTwelfths      { @extend .#{$namespace}u-sizeOneHalf; }
+    .#{$namespace}u-sizeSevenTwelfths    { width: 58.333%; }
+    .#{$namespace}u-sizeEightTwelfths    { @extend .#{$namespace}u-sizeTwoThirds; }
+    .#{$namespace}u-sizeNineTwelfths     { @extend .#{$namespace}u-sizeThreeFourths; }
+    .#{$namespace}u-sizeTenTwelfths      { @extend .#{$namespace}u-sizeFiveSixths; }
+    .#{$namespace}u-sizeElevenTwelfths   { width: 91.666%; }
+
 }
-.u-size1of10 {
-  width: 10% !important;
-}
-.u-size1of8 {
-  width: 12.5% !important;
-}
-.u-size1of6,
-.u-size2of12 {
-  width: 16.667% !important;
-}
-.u-size1of5,
-.u-size2of10 {
-  width: 20% !important;
-}
-.u-size1of4,
-.u-size2of8,
-.u-size3of12 {
-  width: 25% !important;
-}
-.u-size3of10 {
-  width: 30% !important;
-}
-.u-size1of3,
-.u-size2of6,
-.u-size4of12 {
-  width: 33.333% !important;
-}
-.u-size3of8 {
-  width: 37.5% !important;
-}
-.u-size2of5,
-.u-size4of10 {
-  width: 40% !important;
-}
-.u-size5of12 {
-  width: 41.667% !important;
-}
-.u-size1of2,
-.u-size2of4,
-.u-size3of6,
-.u-size4of8,
-.u-size5of10,
-.u-size6of12 {
-  width: 50% !important;
-}
-.u-size7of12 {
-  width: 58.333% !important;
-}
-.u-size3of5,
-.u-size6of10 {
-  width: 60% !important;
-}
-.u-size5of8 {
-  width: 62.5% !important;
-}
-.u-size2of3,
-.u-size4of6,
-.u-size8of12 {
-  width: 66.667% !important;
-}
-.u-size7of10 {
-  width: 70% !important;
-}
-.u-size3of4,
-.u-size6of8,
-.u-size9of12 {
-  width: 75% !important;
-}
-.u-size4of5,
-.u-size8of10 {
-  width: 80% !important;
-}
-.u-size5of6,
-.u-size10of12 {
-  width: 83.333% !important;
-}
-.u-size7of8 {
-  width: 87.5% !important;
-}
-.u-size9of10 {
-  width: 90% !important;
-}
-.u-size11of12 {
-  width: 91.667% !important;
+
+@include deviceType();
+
+@each $breakpoint in $breakpoints {
+  $name: nth($breakpoint, 1);
+  $declaration: nth($breakpoint, 2);
+
+  @media only screen and #{$declaration} {
+      @include deviceType("#{$name}-");
+  }
 }

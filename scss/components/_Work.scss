@@ -1,0 +1,18 @@
+/*------------------------------------*\
+    $WORK
+\*------------------------------------*/
+/**
+ * <li class="Work">
+ *   <img class="Work-thumbnail" src="{{image}}">
+ *   <p class="Work-category">{{category}}</p>
+ *   <h2 class="Work-title">{{title}}</h2>
+ *   <p class="Work-excerpt">{{excerpt}}</p>
+ * </li>
+ */
+
+.Work {
+  list-style: none;
+  p { text-indent: 0; }
+}
+
+.Work-thumbnail { width: 100%; }

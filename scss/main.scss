@@ -6,6 +6,10 @@
  * office@manuelwieser.com
  */
 
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 @import "variables";
 @import "functions";
 @import "mixins";
@@ -26,8 +30,10 @@
  */
 
 @import "components/Banner";
+@import "components/Grid";
 @import "components/Introduction";
 @import "components/Photoset";
+@import "components/Work";
 
 
 

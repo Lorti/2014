@@ -19,17 +19,13 @@ description: I’m a front-end developer and versatile digital artist. I’m int
 
 Yes, [you can hire me][contact] to create your websites, games and digital art.
 
-## Projects I have recently worked on
-
-### Websites
-
-<ul class="Works">
+<ul class="Grid Grid--gutter">
   {% for post in site.posts %}
-    <li>
-      <p><img src="{{ post.picture }}" alt="{{ post.title }}"></p>
-      <p>{{ post.categories }}</p>
-      <h2>{{ post.title }}</h2>
-      <p>{{ post.excerpt }}</p>
+    <li class="Grid-item Work u-sizeOneWhole smaller-u-sizeOneHalf medium-u-sizeOneThird large-u-sizeOneFourth larger-u-sizeOneFifth">
+      <img class="Work-thumbnail" src="{{ post.picture }}" alt="{{ post.title }}">
+      <p class="Work-category">{{ post.categories }}</p>
+      <h2 class="Work-title">{{ post.title }}</h2>
+      <p class="Work-excerpt">{{ post.excerpt }}</p>
 
       {% if post.article %}
         <p><a href="{{ post.url }}">{{ post.url }}</a></p>
@@ -41,9 +37,5 @@ Yes, [you can hire me][contact] to create your websites, games and digital art.
     </li>
   {% endfor %}
 </ul>
-
-### Games
-
-### Digital Art
 
 [contact]: #contact

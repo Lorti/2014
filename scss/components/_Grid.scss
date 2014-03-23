@@ -1,0 +1,36 @@
+/*------------------------------------*\
+    $GRID
+\*------------------------------------*/
+/**
+ * <div class="Grid"></div>
+ */
+
+
+/**
+ * 1. Allow the grid system to be used on lists.
+ */
+.Grid {
+  list-style: none; /* [1] */
+  margin: 0;           
+  padding: 0;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+
+.Grid-item {
+  float: left;
+}
+
+
+.Grid--gutter {
+  margin-left: -$baseLineHeight / 2;
+  margin-right: -$baseLineHeight / 2;
+  .Grid-item {  
+    padding-left: $baseLineHeight / 2;
+    padding-right: $baseLineHeight / 2;
+  }  
+}
