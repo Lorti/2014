@@ -6,19 +6,53 @@
  * </div>
  */
 
+%paragraphs {
+  text-indent: 0;
+  line-height: 1.2;
+}
+
 .Introduction {
+  overflow: hidden;
+  margin: $baseLineHeight (-$baseLineHeight);
+  padding-right: $baseLineHeight;
+  padding-left: $baseLineHeight;
   background-color: $myColor;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  font-size: $baseFontSize * $modularScale;
+}
+
+.Introduction--backgroundImage {
   background-image: linear-gradient(
                       to left,
                       rgba($myColor, 0.75),
                       rgba($myColor, 1)
                       ),
                     url(http://placekitten.com/g/200/300);
-  background-position: center;
-  background-size: cover;
-  color: white;
-  font-size: $baseFontSize * $modularScale;
-  margin-left: -$baseLineHeight;
-  margin-right: -$baseLineHeight;
-  padding: $baseLineHeight;
+}
+
+.Introduction-bigText {
+  margin-bottom: 0;
+  font-weight: bold;
+  @extend %paragraphs;
+}
+.Introduction-smallText {
+  margin-top: 0;
+  @extend %paragraphs;
+}
+.Introduction-link {
+  float: right;
+  font-weight: bold;
+  font-size: $baseFontSize / $modularScale;
+  a:link,
+  a:visited,
+  a:hover,
+  a:active { color: inherit }
+  [class^="icon-"] {
+    display: inline-block;
+    margin-left: .25em;
+    font-size: .75em;
+  }
+  @extend %paragraphs;
 }
