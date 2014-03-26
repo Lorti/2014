@@ -2,3 +2,8 @@
     $MIXINS
 \*------------------------------------*/
 
+@mixin increaseHitArea($size: 12px) {
+  display: inline-block;
+  padding: $size;
+  margin: -$size;
+}

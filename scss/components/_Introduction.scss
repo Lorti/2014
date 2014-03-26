@@ -33,15 +33,16 @@
 }
 
 .Introduction-bigText {
+  @extend %paragraphs;
   margin-bottom: 0;
   font-weight: bold;
-  @extend %paragraphs;
 }
 .Introduction-smallText {
-  margin-top: 0;
   @extend %paragraphs;
+  margin-top: 0;
 }
 .Introduction-link {
+  @extend %paragraphs;
   margin-top: $baseLineHeight;
   margin-bottom: $baseLineHeight / 2;
   text-align: right;
@@ -50,11 +51,13 @@
   a:link,
   a:visited,
   a:hover,
-  a:active { color: inherit }
+  a:active { 
+    color: inherit;
+    @include increaseHitArea(16px);
+  }
   [class^="icon-"] {
     display: inline-block;
     margin-left: .25em;
     font-size: .75em;
   }
-  @extend %paragraphs;
 }
