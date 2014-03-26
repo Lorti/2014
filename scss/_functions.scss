@@ -2,16 +2,25 @@
     $FUNCTIONS
 \*------------------------------------*/
 
-@function pow($x, $n) {
-  $value: 1;
-  @if $n >= 0 {
-    @for $i from 1 through $n {
-      $value: $value * $x;
-    }
-  } @else {
-    @for $i from $n to 0 {
-      $value: $value / $x;
-    }
+@function stripUnit($number) {
+  @return $number / ($number * 0 + 1);
+}
+
+@function pow($value, $pow) {
+  $result: 1;
+  @while($pow > 0) {
+    $result: $result * $value;
+    $pow: $pow - 1;
   }
-  @return $value;
+  @return $result;
+}
+
+$baseFontSize: 1rem !default;
+$modularScale: 1.25 !default;
+$baseLineHeight: 1.5rem !default;
+@function relativeFontSize($fontSizeFactor) {
+  @return stripUnit($baseFontSize) * pow($modularScale, $fontSizeFactor - 1) * 1em;
+}
+@function relativeLineHeight($lineHeightFactor, $fontSizeFactor: 1) {
+  @return stripUnit($baseLineHeight) / stripUnit(relativeFontSize($fontSizeFactor)) * $lineHeightFactor * 1em;
 }

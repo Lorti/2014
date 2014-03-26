@@ -42,7 +42,9 @@
   @extend %paragraphs;
 }
 .Introduction-link {
-  float: right;
+  margin-top: $baseLineHeight;
+  margin-bottom: $baseLineHeight / 2;
+  text-align: right;
   font-weight: bold;
   font-size: $baseFontSize / $modularScale;
   a:link,

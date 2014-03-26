@@ -9,7 +9,7 @@ body {
   color: $textColor;
   font-size: $baseFontSize;
   font-family: "Lato", sans-serif;
-  line-height: strip-unit($baseLineHeight);
+  line-height: stripUnit($baseLineHeight);
 }
 
 h1, h2, h3 {

@@ -12,27 +12,28 @@
  * </div>
  */
 
-.Banner {}
+.Banner { font-size: 75%; }
 
 .Banner-heading {
   text-transform: uppercase;
   font-weight: bold;
-  font-size: $baseFontSize * pow($modularScale, 4);
-  line-height: $baseLineHeight * 2.5;
-  margin-bottom: $baseLineHeight * 2;
+  font-size: relativeFontSize(5);
+  line-height: relativeLineHeight(2.5, 5);
+  margin-top: relativeLineHeight(1, 5);
+  margin-bottom: relativeLineHeight(1, 5);
 }
 
 .Banner-tagline {
-  margin-top: -$baseLineHeight * 2.5;
+  margin-top: relativeLineHeight(-1.5);
 }
 
 .Banner-logo {
   float: left;
-  line-height: $baseLineHeight * 2.5;
+  line-height: relativeLineHeight(2.5);
   img {
     vertical-align: middle;
-    margin-right: $baseLineHeight * 0.5;
-    width: $baseLineHeight * 3.5;
-    height: $baseLineHeight * 3.5 / $logoAspectRatio;
+    margin-right: relativeLineHeight(0.5);
+    width: relativeLineHeight(3.5);
+    height: relativeLineHeight(3.5) / $logoAspectRatio;
   }
 }
