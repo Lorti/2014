@@ -17,7 +17,15 @@ module.exports = function (grunt) {
 	  },
 
 	  clean: {
-      target: ['build']
+      before: ['_site'],
+      after: ['_site/js/modules', '_site/**/*.map', '_site/**/thumbs.db']
+    },
+
+    concat: {
+      target: {
+        src: ['js/main.js', 'js/modules/*.js'],
+        dest: '_site/js/main.js'
+      }
     },
 
     concurrent: {
@@ -50,7 +58,7 @@ module.exports = function (grunt) {
 	  },
 
 	  jekyll: {
-	  	test: {
+	  	dev: {
 	      options: {
 	        dest: '_site/',
 	        config: '_config.yml'
@@ -85,6 +93,28 @@ module.exports = function (grunt) {
       }
     },
 
+    uglify: {
+      dev: {
+        options: {
+          sourceMap: true
+        },
+        files: {
+          '_site/js/main.js': '_site/js/main.js'
+        }
+      },
+      build: {
+        options: {
+          compress: {
+            global_defs: { 'DEBUG': false },
+            dead_code: true
+          }
+        },
+        files: {
+          '_site/js/main.js': '_site/js/main.js'
+        }
+      }
+    },
+
 		watch: {
 			options: {
 				livereload: true
@@ -98,26 +128,32 @@ module.exports = function (grunt) {
           '_layouts/**',
           '_posts/**',
           'css/**',
-          'js/**',
           '*.html',
           '*.markdown',
           'tests/**'
         ],
-				tasks: ['jekyll:test']
-			}
+				tasks: ['jekyll:dev']
+			},
+      js: {
+        files: ['js/**'],
+        tasks: ['concat', 'uglify:dev']
+      }
 		}
 	});
 
 	require('load-grunt-tasks')(grunt);
 
 	grunt.registerTask('default', ['concurrent']);
+  grunt.registerTask('createStyles', ['sass', 'autoprefixer']);
+  grunt.registerTask('createScripts', ['concat', 'uglify:build']);
 	grunt.registerTask('build', [
-		'clean',
-		'sass',
-		'autoprefixer',
+		'clean:before',
+		'createStyles',
 		'svg2png',
 		'jekyll:build',
-		'imagemin'
+    'createScripts',
+    'imagemin',
+    'clean:after'
 	]);
 
 };
