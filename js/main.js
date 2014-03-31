@@ -3,7 +3,10 @@
  * @author office@manuelwieser.com
  */
 
-var DEBUG = true;
+/**
+ * https://github.com/gruntjs/grunt-contrib-uglify#conditional-compilation
+ */
+DEBUG = true;
 
 curl.config({
   baseUrl: '/js',

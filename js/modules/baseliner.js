@@ -10,7 +10,7 @@
  *
  */
 
-define(function() {
+define('modules/baseliner', function() {
 
   var merge = function(src, dest) {
     for (prop in src) {

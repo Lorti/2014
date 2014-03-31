@@ -94,6 +94,9 @@ module.exports = function (grunt) {
     },
 
     uglify: {
+      options: {
+        mangle: false
+      },
       dev: {
         options: {
           sourceMap: true
@@ -121,13 +124,12 @@ module.exports = function (grunt) {
 			},
 			css: {
 				files: ['scss/**'],
-				tasks: ['sass', 'autoprefixer']
+				tasks: ['sass', 'autoprefixer', 'jekyll:dev']
 			},
 			html: {
 				files: [
           '_layouts/**',
           '_posts/**',
-          'css/**',
           '*.html',
           '*.markdown',
           'tests/**'
@@ -136,7 +138,7 @@ module.exports = function (grunt) {
 			},
       js: {
         files: ['js/**'],
-        tasks: ['concat', 'uglify:dev']
+        tasks: ['concat', 'uglify:dev', 'jekyll:dev']
       }
 		}
 	});
