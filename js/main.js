@@ -4,9 +4,9 @@
  */
 
 /**
- * https://github.com/gruntjs/grunt-contrib-uglify#conditional-compilation
+ * http://jstarrdewar.com/blog/2013/02/28/use-uglify-to-automatically-strip-debug-messages-from-your-javascript/
  */
-DEBUG = true;
+if (typeof DEBUG === 'undefined') DEBUG = true;
 
 curl.config({
   baseUrl: '/js',
