@@ -1,0 +1,24 @@
+/*------------------------------------*\
+    $FOOTER
+\*------------------------------------*/
+/**
+ * <div class="Footer">
+ *   …
+ * </div>
+ */
+
+.Footer {
+  overflow: hidden;
+  margin-right: -$baseLineHeight;
+  margin-left: -$baseLineHeight;
+  padding-right: $baseLineHeight;
+  padding-left: $baseLineHeight;
+  background-color: $textColor;
+  color: $backgroundColor;
+  p { @extend %styledParagraph; }
+}
+
+.Footer-portrait {
+  margin-top: $baseLineHeight * 2;
+  border-radius: 50%;
+}

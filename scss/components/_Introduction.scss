@@ -6,7 +6,7 @@
  * </div>
  */
 
-%paragraphs {
+%introductionParagraphs {
   text-indent: 0;
   line-height: 1.2;
 }
@@ -16,7 +16,7 @@
   margin: $baseLineHeight (-$baseLineHeight);
   padding-right: $baseLineHeight;
   padding-left: $baseLineHeight;
-  background-color: $myColor;
+  background-color: $pureOrange;
   background-position: center;
   background-size: cover;
   color: white;
@@ -26,23 +26,23 @@
 .Introduction--backgroundImage {
   background-image: linear-gradient(
                       to left,
-                      rgba($myColor, 0.75),
-                      rgba($myColor, 1)
+                      rgba($pureOrange, 0.75),
+                      rgba($pureOrange, 1)
                       ),
                     url(http://placekitten.com/g/200/300);
 }
 
 .Introduction-bigText {
-  @extend %paragraphs;
+  @extend %introductionParagraphs;
   margin-bottom: 0;
   font-weight: bold;
 }
 .Introduction-smallText {
-  @extend %paragraphs;
+  @extend %introductionParagraphs;
   margin-top: 0;
 }
 .Introduction-link {
-  @extend %paragraphs;
+  @extend %introductionParagraphs;
   margin-top: $baseLineHeight;
   margin-bottom: $baseLineHeight / 2;
   text-align: right;

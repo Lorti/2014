@@ -4,7 +4,8 @@
 
 html { font-size: 100%; }
 body {
-  margin: $baseLineHeight;
+  margin-right: $baseLineHeight;
+  margin-left: $baseLineHeight;
   background: $backgroundColor;
   color: $textColor;
   font-size: $baseFontSize;
@@ -45,11 +46,11 @@ p + p {
 
 a:link,
 a:visited {
-  color: $myColor;
+  color: $pureOrange;
   text-decoration: none;
 }
 a:hover,
-a:active { color: desaturate($myColor, 100%); }
+a:active { color: desaturate($pureOrange, 100%); }
 
 strong { font-weight: bold; }
 em { font-style: italic; }
@@ -69,11 +70,27 @@ blockquote {
   }
   [lang="en"] &,
   &[lang="en"] {
-    p:first-of-type:before { content: $character-ldquo-en; }
+    p:first-o€f-type:before { content: $character-ldquo-en; }
     p:last-of-type:after { content: $character-rdquo-en; }
   }
   footer {
     text-align: right;
     margin-top: -$baseLineHeight;
+  }
+}
+
+
+
+/*------------------------------------*\
+    $TOOLS
+\*------------------------------------*/
+
+/**
+ * Some paragraphs need a special styling that differs from normal text.
+ */
+%styledParagraph {
+  & + & {
+    margin-top: $baseLineHeight;
+    text-indent: 0;
   }
 }
