@@ -22,3 +22,24 @@
   margin-top: $baseLineHeight * 2;
   border-radius: 50%;
 }
+
+.Footer-linkList {
+  padding-left: 0;
+  list-style: none;
+}
+
+.Footer-linkList-item {
+  a {
+    display: block;
+    border-bottom: 1px solid rgba($backgroundColor, .25);
+    color: $backgroundColor;
+    line-height: $baseLineHeight * 1.75;
+  }
+  &:last-child a { border-bottom-width: 0; }
+  [class^="icon-"] {
+    display: inline-block;
+    min-width: $baseLineHeight * 2;
+    vertical-align: -.175em;
+    font-size: $baseLineHeight;
+  }
+}

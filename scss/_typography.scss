@@ -46,6 +46,8 @@ p + p {
 
 a:link,
 a:visited {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
   color: $pureOrange;
   text-decoration: none;
 }
