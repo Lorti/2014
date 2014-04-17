@@ -7,19 +7,25 @@
  * </div>
  */
 
+/**
+ * 1. I want my margins to collapse although the text is in floated elements.
+ */
 .Footer {
   overflow: hidden;
   margin-right: -$baseLineHeight;
   margin-left: -$baseLineHeight;
   padding-right: $baseLineHeight;
+  padding-bottom: $baseLineHeight;
   padding-left: $baseLineHeight;
   background-color: $textColor;
   color: $backgroundColor;
-  p { @extend %styledParagraph; }
+  .Grid-item > :last-child { margin-bottom: 0; } /* [1] */
 }
 
 .Footer-portrait {
+  display: block;
   margin-top: $baseLineHeight * 2;
+  width: 100%;
   border-radius: 50%;
 }
 

@@ -11,7 +11,7 @@
  */
 .Grid {
   list-style: none; /* [1] */
-  margin: 0;           
+  margin: 0;
   padding: 0;
   &:after {
     content: "";
@@ -20,17 +20,15 @@
   }
 }
 
-
 .Grid-item {
   float: left;
 }
 
-
 .Grid--gutter {
   margin-left: -$baseLineHeight / 2;
   margin-right: -$baseLineHeight / 2;
-  .Grid-item {  
+  & > .Grid-item {
     padding-left: $baseLineHeight / 2;
     padding-right: $baseLineHeight / 2;
-  }  
+  }
 }
