@@ -19,6 +19,7 @@
   padding-left: $baseLineHeight;
   background-color: $textColor;
   color: $backgroundColor;
+  p { @extend %styledParagraph; }
   .Grid-item > :last-child { margin-bottom: 0; } /* [1] */
 }
 

@@ -16,11 +16,27 @@
     $DISPLAY
 \*------------------------------------*/
 
-.u-inline { display: inline !important; }
-.u-inlineBlock { display: inline-block !important; }
-.u-block { display: block !important; }
-.u-table { display: table !important; }
-.u-tableCell { display: table-cell !important; }
+@mixin displayUtilities($namespace: "") {
+  .#{$namespace}u-hidden { display: none !important; }
+  .#{$namespace}u-transparent { visibility: hidden !important; }
+
+  .#{$namespace}u-inline { display: inline !important; }
+  .#{$namespace}u-inlineBlock { display: inline-block !important; }
+  .#{$namespace}u-block { display: block !important; }
+  .#{$namespace}u-table { display: table !important; }
+  .#{$namespace}u-tableCell { display: table-cell !important; }
+}
+
+@include displayUtilities();
+
+@each $breakpoint in $breakpoints {
+  $name: nth($breakpoint, 1);
+  $declaration: nth($breakpoint, 2);
+
+  @media only screen and #{$declaration} {
+    @include displayUtilities("#{$name}-");
+  }
+}
 
 
 
@@ -62,16 +78,7 @@
     $WIDTHS
 \*------------------------------------*/
 
-$breakpoints: (
-    "smaller" "(min-width: 480px)",
-    "small" "(min-width: 640px)",
-    "medium" "(min-width: 960px)",
-    "large" "(min-width: 1280px)",
-    "larger" "(min-width: 1440px)"
-)!default;
-
-
-@mixin deviceType($namespace: "") {
+@mixin widthUtilities($namespace: "") {
 
     /**
      * Whole
@@ -162,13 +169,13 @@ $breakpoints: (
 
 }
 
-@include deviceType();
+@include widthUtilities();
 
 @each $breakpoint in $breakpoints {
   $name: nth($breakpoint, 1);
   $declaration: nth($breakpoint, 2);
 
   @media only screen and #{$declaration} {
-      @include deviceType("#{$name}-");
+    @include widthUtilities("#{$name}-");
   }
 }
