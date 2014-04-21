@@ -2,24 +2,27 @@
     $FOOTER
 \*------------------------------------*/
 /**
- * The footer has some special elements and makes heavy use of the grid system.
+ * <div class="Footer">
+ *   …
+ * </div>
  */
 
-
-
 /**
- * 1. I want my margins to collapse although the text is in floated elements.
+ * 1. Intended paragraphs only look good for long text passages.
+ * 2. Margins should collapse although the text is in floated elements.
  */
 .Footer {
   overflow: hidden;
+  margin-top: $baseLineHeight;
   margin-right: -$baseLineHeight;
   margin-left: -$baseLineHeight;
+  margin-bottom: -$baseLineHeight;
   padding-right: $baseLineHeight;
   padding-left: $baseLineHeight;
   background-color: $textColor;
   color: $backgroundColor;
-  p { @extend %styledParagraph; }
-  .Grid-item > :last-child { margin-bottom: 0; } /* [1] */
+  p { @extend %styledParagraph; } /* [1] */
+  .Grid-item > :last-child { margin-bottom: 0; } /* [2] */
 }
 
 .Footer-portrait {

@@ -34,7 +34,7 @@
   $name: nth($breakpoint, 1);
   $declaration: nth($breakpoint, 2);
 
-  @media only screen and #{$declaration} {
+  @media #{$declaration} {
     @include displayUtilities("#{$name}-");
   }
 }
@@ -176,7 +176,7 @@
   $name: nth($breakpoint, 1);
   $declaration: nth($breakpoint, 2);
 
-  @media only screen and #{$declaration} {
+  @media #{$declaration} {
     @include widthUtilities("#{$name}-");
   }
 }
@@ -286,7 +286,7 @@
   $name: nth($breakpoint, 1);
   $declaration: nth($breakpoint, 2);
 
-  @media only screen and #{$declaration} {
+  @media #{$declaration} {
     @include pushUtilities("#{$name}-");
   }
 }

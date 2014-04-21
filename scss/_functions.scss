@@ -15,12 +15,20 @@
   @return $result;
 }
 
+/**
+ * These two functions ought to make working with relative values easier.
+ */
 $baseFontSize: 1rem !default;
 $modularScale: 1.25 !default;
 $baseLineHeight: 1.5rem !default;
-@function relativeFontSize($fontSizeFactor) {
-  @return stripUnit($baseFontSize) * pow($modularScale, $fontSizeFactor - 1) * 1em;
+
+@function relativeFontSize($fontSize) {
+  @if($fontSize > 0) {   
+    @return stripUnit($baseFontSize) * pow($modularScale, $fontSize) * 1em;
+  } @else {
+    @return stripUnit($baseFontSize) / pow($modularScale, -$fontSize) * 1em;
+  }
 }
-@function relativeLineHeight($lineHeightFactor, $fontSizeFactor: 1) {
+@function relativeLineHeight($lineHeightFactor, $fontSizeFactor: 0) {
   @return stripUnit($baseLineHeight) / stripUnit(relativeFontSize($fontSizeFactor)) * $lineHeightFactor * 1em;
 }

@@ -7,3 +7,14 @@
   padding: $size;
   margin: -$size;
 }
+
+@mixin breakpoint($point) {
+  @each $breakpoint in $breakpoints {
+    $name: nth($breakpoint, 1);
+    $declaration: nth($breakpoint, 2);
+
+    @if($point == $name) {   
+      @media #{$declaration} { @content; }
+    }
+  }
+}

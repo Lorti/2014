@@ -3,6 +3,7 @@
 \*------------------------------------*/
 /**
  * <div class="Introduction">
+ *   …
  * </div>
  */
 
@@ -13,14 +14,14 @@
 
 .Introduction {
   overflow: hidden;
-  margin: $baseLineHeight (-$baseLineHeight);
+  margin: $baseLineHeight (-$baseLineHeight) $baseLineHeight * 2;
   padding-right: $baseLineHeight;
   padding-left: $baseLineHeight;
   background-color: $pureOrange;
   background-position: center;
   background-size: cover;
   color: white;
-  font-size: $baseFontSize * $modularScale;
+  font-size: 1rem;
 }
 
 .Introduction--backgroundImage {
@@ -36,18 +37,22 @@
   @extend %introductionParagraphs;
   margin-bottom: 0;
   font-weight: bold;
+  font-size: relativeFontSize(2);
 }
 .Introduction-smallText {
   @extend %introductionParagraphs;
   margin-top: 0;
+  font-size: relativeFontSize(1);
+  margin-bottom: $baseLineHeight * 2;
 }
 .Introduction-link {
   @extend %introductionParagraphs;
-  margin-top: $baseLineHeight;
+  margin-top: -$baseLineHeight;
   margin-bottom: $baseLineHeight / 2;
   text-align: right;
+  text-decoration: none;
   font-weight: bold;
-  font-size: $baseFontSize / $modularScale;
+  font-size: relativeFontSize(-1);
   a:link,
   a:visited,
   a:hover,
@@ -60,4 +65,8 @@
     margin-left: .25em;
     font-size: .75em;
   }
+}
+
+@include breakpoint("medium") {
+  .Introduction { font-size: $baseFontSize * $modularScale; }  
 }

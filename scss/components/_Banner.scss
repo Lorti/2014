@@ -12,15 +12,15 @@
  * </div>
  */
 
-.Banner { font-size: 75%; }
+.Banner { font-size: .75rem; }
 
 .Banner-heading {
   text-transform: uppercase;
   font-weight: bold;
-  font-size: relativeFontSize(5);
-  line-height: relativeLineHeight(2.5, 5);
-  margin-top: relativeLineHeight(1, 5);
-  margin-bottom: relativeLineHeight(1, 5);
+  font-size: relativeFontSize(4);
+  line-height: relativeLineHeight(2.5, 4);
+  margin-top: relativeLineHeight(1, 4);
+  margin-bottom: relativeLineHeight(1, 4);
 }
 
 .Banner-tagline {
@@ -36,4 +36,8 @@
     width: relativeLineHeight(3.5);
     height: relativeLineHeight(3.5) / $logoAspectRatio;
   }
+}
+
+@include breakpoint("medium") {
+  .Banner { font-size: $baseFontSize; }  
 }

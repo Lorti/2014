@@ -36,20 +36,3 @@
 @import "components/Introduction";
 @import "components/Photoset";
 @import "components/Work";
-
-
-
-/*------------------------------------*\
-    $MICROFORMATS
-\*------------------------------------*/
-/**
- * In the near future these may be replaced by RDFa.
- * http://microformats.org/wiki/microformats2
- */
-
-.h-resume {
-  .p-summary {
-    font-size: $baseFontSize * $modularScale;
-    line-height: $baseLineHeight * 1.25;
-  }
-}

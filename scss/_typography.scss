@@ -4,8 +4,7 @@
 
 html { font-size: 100%; }
 body {
-  margin-right: $baseLineHeight;
-  margin-left: $baseLineHeight;
+  margin: $baseLineHeight;
   background: $backgroundColor;
   color: $textColor;
   font-size: $baseFontSize;
