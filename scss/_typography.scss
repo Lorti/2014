@@ -37,7 +37,7 @@ p, ul, ol, pre, blockquote {
   margin-bottom: $baseLineHeight;
 }
 small, aside {
-  font-size: $baseLineHeight * 0.5;
+  font-size: $baseFontSize / $modularScale;
 }
 p + p {
   margin-top: -$baseLineHeight;

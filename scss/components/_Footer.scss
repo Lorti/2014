@@ -2,10 +2,10 @@
     $FOOTER
 \*------------------------------------*/
 /**
- * <div class="Footer">
- *   …
- * </div>
+ * The footer has some special elements and makes heavy use of the grid system.
  */
+
+
 
 /**
  * 1. I want my margins to collapse although the text is in floated elements.
@@ -15,7 +15,6 @@
   margin-right: -$baseLineHeight;
   margin-left: -$baseLineHeight;
   padding-right: $baseLineHeight;
-  padding-bottom: $baseLineHeight;
   padding-left: $baseLineHeight;
   background-color: $textColor;
   color: $backgroundColor;
@@ -49,4 +48,12 @@
     vertical-align: -.175em;
     font-size: $baseLineHeight;
   }
+}
+
+.Footer-copyright {
+  margin-right: -$baseLineHeight;
+  margin-bottom: 0;
+  margin-left: -$baseLineHeight;
+  padding: $baseLineHeight;
+  background-color: darken($textColor, 5%);
 }
