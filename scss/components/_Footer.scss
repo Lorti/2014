@@ -48,9 +48,8 @@
 }
 
 .Footer-copyright {
-  margin-right: -$baseLineHeight;
   margin-bottom: 0;
-  margin-left: -$baseLineHeight;
-  padding: $baseLineHeight;
+  padding-top: $baseLineHeight;
+  padding-bottom: $baseLineHeight;
   background-color: darken($textColor, 5%);
 }
