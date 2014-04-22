@@ -14,9 +14,7 @@
 
 .Introduction {
   overflow: hidden;
-  margin: $baseLineHeight (-$baseLineHeight) $baseLineHeight * 2;
-  padding-right: $baseLineHeight;
-  padding-left: $baseLineHeight;
+  margin: $baseLineHeight 0 $baseLineHeight * 2;
   background-color: $pureOrange;
   background-position: center;
   background-size: cover;

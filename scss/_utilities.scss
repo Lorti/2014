@@ -2,14 +2,26 @@
     $UTILITIES
 \*------------------------------------*/
 /**
+ * $LAYOUT.......General layout utilities
  * $DISPLAY......Display utilities
  * $SIZE.........Size utilities
  * $WIDTH........Width utilities
  * $PUSH.........Push utilities
  *
- * These are taken from https://github.com/suitcss/utils 
+ * These are taken from https://github.com/suitcss/utils
  * and change certain traits of an element.
  */
+
+
+
+/*------------------------------------*\
+    $LAYOUT
+\*------------------------------------*/
+
+.u-row {
+  padding-left: ((stripUnit($baseLineHeight) * 16) / 320) * 100% !important;
+  padding-right: ((stripUnit($baseLineHeight) * 16) / 320) * 100% !important;
+}
 
 
 

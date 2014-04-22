@@ -13,10 +13,6 @@
  */
 .Footer {
   overflow: hidden;
-  margin-right: -$baseLineHeight;
-  margin-left: -$baseLineHeight;
-  padding-right: $baseLineHeight;
-  padding-left: $baseLineHeight;
   background-color: $textColor;
   color: $backgroundColor;
   p { @extend %styledParagraph; } /* [1] */p

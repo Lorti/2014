@@ -12,6 +12,7 @@
 
 .Work {
   list-style: none;
+  a { word-wrap: break-word; }
   p { @extend %styledParagraph; }
   :last-child { margin-bottom: $baseLineHeight * 2; }
 }
