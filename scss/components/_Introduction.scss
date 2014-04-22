@@ -56,7 +56,7 @@
   a:link,
   a:visited,
   a:hover,
-  a:active { 
+  a:active {
     color: inherit;
     @include increaseHitArea(16px);
   }
@@ -68,5 +68,5 @@
 }
 
 @include breakpoint("medium") {
-  .Introduction { font-size: $baseFontSize * $modularScale; }  
+  .Introduction { font-size: $baseFontSize * $modularScale; }
 }

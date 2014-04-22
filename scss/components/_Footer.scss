@@ -13,14 +13,13 @@
  */
 .Footer {
   overflow: hidden;
-  margin-top: $baseLineHeight;
   margin-right: -$baseLineHeight;
   margin-left: -$baseLineHeight;
   padding-right: $baseLineHeight;
   padding-left: $baseLineHeight;
   background-color: $textColor;
   color: $backgroundColor;
-  p { @extend %styledParagraph; } /* [1] */
+  p { @extend %styledParagraph; } /* [1] */p
   .Grid-item > :last-child { margin-bottom: 0; } /* [2] */
 }
 

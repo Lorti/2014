@@ -12,7 +12,24 @@
 
 .Work {
   list-style: none;
-  p { text-indent: 0; }
+  p { @extend %styledParagraph; }
+  :last-child { margin-bottom: $baseLineHeight * 2; }
 }
 
-.Work-thumbnail { width: 100%; }
+.Work-thumbnail {
+  width: 100%;
+  display: block;
+}
+.Work-category {
+  margin-top: 0;
+  margin-bottom: -$baseLineHeight;
+  color: $pureOrange;
+  text-align: right;
+  text-transform: uppercase;
+  letter-spacing: .025em;
+  font-size: $baseFontSize / $modularScale;
+  line-height: $baseLineHeight;
+}
+.Work-title {
+  margin-top: $baseLineHeight;
+}
