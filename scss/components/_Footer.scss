@@ -13,9 +13,11 @@
  */
 .Footer {
   overflow: hidden;
+  margin-top: $baseLineHeight;
   background-color: $textColor;
   color: $backgroundColor;
-  p { @extend %styledParagraph; } /* [1] */p
+  a { white-space: nowrap; }
+  p { @extend %styledParagraph; } /* [1] */
   .Grid-item > :last-child { margin-bottom: 0; } /* [2] */
 }
 
@@ -48,6 +50,7 @@
 }
 
 .Footer-copyright {
+  margin-top: $baseLineHeight * 2;
   margin-bottom: 0;
   padding-top: $baseLineHeight;
   padding-bottom: $baseLineHeight;

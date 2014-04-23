@@ -11,10 +11,12 @@
  */
 
 .Work {
+  padding-top: $baseLineHeight;
+  padding-bottom: $baseLineHeight;
   list-style: none;
   a { word-wrap: break-word; }
   p { @extend %styledParagraph; }
-  :last-child { margin-bottom: $baseLineHeight * 2; }
+  :last-child { margin-bottom: 0; }
 }
 
 .Work-thumbnail {

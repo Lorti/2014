@@ -32,3 +32,19 @@
     padding-right: $baseLineHeight / 2;
   }
 }
+.Grid--halfGutter {
+  margin-left: -$baseLineHeight / 4;
+  margin-right: -$baseLineHeight / 4;
+  & > .Grid-item {
+    padding-left: $baseLineHeight / 4;
+    padding-right: $baseLineHeight / 4;
+  }
+}
+.Grid--doubleGutter {
+  margin-left: -$baseLineHeight;
+  margin-right: -$baseLineHeight;
+  & > .Grid-item {
+    padding-left: $baseLineHeight;
+    padding-right: $baseLineHeight;
+  }
+}

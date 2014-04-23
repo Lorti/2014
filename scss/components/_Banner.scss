@@ -12,7 +12,10 @@
  * </div>
  */
 
-.Banner { font-size: .75rem; }
+.Banner { 
+  font-size: .75rem; 
+  @include breakpoint("medium") { font-size: $baseFontSize; }
+}
 
 .Banner-heading {
   text-transform: uppercase;
@@ -36,8 +39,4 @@
     width: relativeLineHeight(3.5);
     height: relativeLineHeight(3.5) / $logoAspectRatio;
   }
-}
-
-@include breakpoint("medium") {
-  .Banner { font-size: $baseFontSize; }  
 }
