@@ -17,7 +17,7 @@ module.exports = function (grunt) {
 	  },
 
 	  clean: {
-      before: ['_site', '!_site/*.json'],
+      before: ['_site/*', '!_site/*.json'],
       after: ['_site/js/modules', '_site/**/*.map', '_site/**/thumbs.db', '!_site/*.json']
     },
 
