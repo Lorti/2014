@@ -9,4 +9,6 @@ picture: "http://placehold.it/450x300"
 link: "http://clementine.radiatedpixel.com/"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, accusantium, repellat, quidem, excepturi quisquam aspernatur recusandae ut illo ullam doloremque rem assumenda maiores soluta suscipit consequuntur dicta expedita praesentium ipsa beatae iure id magni perspiciatis error minus voluptas molestiae velit itaque. Nobis, quia, modi aliquid quidem aut minus possimus neque!
+Clementine is a skill-based brain-twisting platformer developed by [Radiated Pixel](1). Its prototype was created at a game jam on a single weekend. Since then it has turned into our first commercially available game for iOS, Android and Windows Phone. I created the website, environment graphics and sound effects. To lessen the burden on our main programmer I also took over minor parts of the code prior to the release.
+
+[1] http://www.radiatedpixel.com/
