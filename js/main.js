@@ -15,6 +15,7 @@ curl.config({
 curl([
     'modules/baseliner',
     'modules/photoset',
+    'modules/rhythm',
     'modules/scroller',
     'modules/svg',
   ]).then(

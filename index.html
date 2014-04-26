@@ -22,9 +22,9 @@ description: I’m a front-end developer and versatile digital artist. I’m int
     {% for post in site.posts %}
       <li class="Grid-item Work smaller-u-sizeOneHalf medium-u-sizeOneThird large-u-sizeOneFourth larger-u-sizeOneFifth">
         {% if post.picture %}
-          <img class="Work-thumbnail" src="{{ site.url }}/images/{{ post.picture }}" alt="{{ post.title }}">
+          <img class="Work-thumbnail js-rhythm" src="{{ site.url }}/images/{{ post.picture }}" alt="{{ post.title }}">
         {% else %}
-          <img class="Work-thumbnail" src="http://placehold.it/450x300" alt="{{ post.title }}">
+          <img class="Work-thumbnail js-rhythm" src="http://placehold.it/450x300" alt="{{ post.title }}">
         {% endif %}
         <!-- <p class="Work-category">{{ post.categories }}</p> -->
         <h2 class="Work-title">{{ post.title }}</h2>
