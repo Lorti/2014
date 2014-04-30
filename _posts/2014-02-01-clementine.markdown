@@ -6,7 +6,8 @@ categories: Game
 
 article: false
 picture: clementine.jpg
-link: http://clementine.radiatedpixel.com/
+link: "http://clementine.radiatedpixel.com/"
+label: "http://clementine.radiatedpixel.com/"
 ---
 
 Clementine is a skill-based brain-twisting platformer whose prototype was made at a game jam on a single weekend. Since then it has turned into Radiated Pixel's first game for iOS, Android and Windows Phone. I created the website, painted the environment graphics and programmed various parts of the code.
