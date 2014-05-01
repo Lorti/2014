@@ -20,12 +20,13 @@ curl([
   ]).then(
   function(baseliner, grid, rhythm, svg) {
     if (debug) { new baseliner(12); }
-    rhythm();
-    grid();
     window.addEventListener('resize', function() {
       rhythm();
       grid();
     });
+    var e = document.createEvent('UIEvents');
+    e.initUIEvent('resize', true, false, window, 0);
+    window.dispatchEvent(e);
   },
   function() {
     console.log('Oh dear, something went wrong!');
