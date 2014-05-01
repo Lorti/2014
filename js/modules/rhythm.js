@@ -15,7 +15,7 @@ define('modules/rhythm', ['domReady!'], function() {
           height;
 
       image.removeAttribute('style');
-      factor = Math.ceil(image.getBoundingClientRect().height / baseline);
+      factor = Math.ceil(image.clientHeight / baseline);
       height = baseline * factor;
       if (height !== 0) {
         image.style.height = baseline * factor + 'px';
