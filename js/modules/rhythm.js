@@ -17,12 +17,7 @@ define('modules/rhythm', ['domReady!'], function() {
       factor = Math.ceil(image.clientHeight / baseline);
       image.style.height = baseline * factor + 'px';
     }
-  }
-
-  rhythm();
-
-  window.addEventListener('resize', function() {
-    rhythm();
-  }, true);
+  };
+  return rhythm;
 
 });
