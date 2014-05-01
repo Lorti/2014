@@ -100,11 +100,9 @@ module.exports = function (grunt) {
     },
 
     uglify: {
-      options: {
-        mangle: false
-      },
       dev: {
         options: {
+          mangle: false,
           sourceMap: true
         },
         files: {
@@ -113,8 +111,9 @@ module.exports = function (grunt) {
       },
       build: {
         options: {
+          mangle: false,
           compress: {
-            global_defs: { 'DEBUG': false },
+            global_defs: { 'debug': false },
             dead_code: true
           }
         },
