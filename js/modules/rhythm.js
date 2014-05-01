@@ -2,6 +2,8 @@
     $RHYTHM
 \*------------------------------------*/
 
+// TODO: Setting the height does not work in Firefox after a hard refresh.
+
 define('modules/rhythm', ['domReady!'], function() {
 
   var rhythm = function() {
@@ -11,11 +13,15 @@ define('modules/rhythm', ['domReady!'], function() {
 
     for (var i = 0; i < images.length; i++) {
       var image = images[i],
-          factor;
+          factor,
+          height;
 
       image.style.height = 'auto';
       factor = Math.ceil(image.clientHeight / baseline);
-      image.style.height = baseline * factor + 'px';
+      height = baseline * factor;
+      if (height !== 0) {
+        image.style.height = baseline * factor + 'px';
+      }
     }
   };
   return rhythm;

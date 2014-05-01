@@ -14,8 +14,6 @@
   padding-top: $baseLineHeight;
   padding-bottom: $baseLineHeight;
   list-style: none;
-  .js & { visibility: hidden }
-  &.js-show { visibility: visible; }
   p { @extend %styledParagraph; }
   :last-child { margin-bottom: 0; }
 }

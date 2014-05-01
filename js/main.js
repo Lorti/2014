@@ -16,17 +16,16 @@ curl([
     'modules/baseliner',
     'modules/grid',
     'modules/rhythm',
-    'modules/scroller',
     'modules/svg',
   ]).then(
-  function(baseliner, grid, rhythm, scroller, svg) {
+  function(baseliner, grid, rhythm, svg) {
     if (DEBUG) { new baseliner(12); }
     rhythm();
     grid();
     window.addEventListener('resize', function() {
       rhythm();
       grid();
-    }, true);
+    });
   },
   function() {
     console.log('Oh dear, something went wrong!');
