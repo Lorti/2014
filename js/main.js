@@ -19,7 +19,7 @@ curl([
     'modules/scroller',
     'modules/svg',
   ]).then(
-  function(baseliner, grid, photoset, rhythm, scroller, svg) {
+  function(baseliner, grid, rhythm, scroller, svg) {
     if (DEBUG) { new baseliner(12); }
     rhythm();
     grid();

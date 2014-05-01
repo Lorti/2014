@@ -5,43 +5,42 @@
 define('modules/grid', ['domReady!'], function() {
 
   var grid = function() {
-    var works = document.getElementsByClassName('Work'),
-        lines = [],
-        index = -1,
-        lastOffset = 0;
+    var works = Array.prototype.slice.call(document.getElementsByClassName('js-grid')),
+        rows = [],
+        row = -1,
+        lastOffset;
 
     /**
      * Group grid items by their vertical position.
      */
-    for (var i = 0; i < works.length; i++) {
-      var work = works[i],
-          offset = work.offsetTop;
+    works.forEach(function(column) {
+      var offset = column.offsetTop;
       if (offset !== lastOffset) {
-        index++;
-        lines[index] = [];
+        row++;
+        rows[row] = [];
       }
-      lines[index].push(work);
+      rows[row].push(column);
       lastOffset = offset;
-    }
+    });
 
     /**
-     * Calculate and set the perfect height for each line.
+     * Calculate and set the perfect height for each row.
      */
-    for (var j = 0; j < lines.length; j++) {
-      var works = lines[j],
-          heights = [],
+    rows.forEach(function(row) {
+      var heights = [],
           maxHeight;
 
-      for (var k = 0; k < works.length; k++) {
-        heights.push(works[k].clientHeight);
-      }
+      row.forEach(function(column) {
+        heights.push(column.clientHeight);
+      });
 
       maxHeight = Math.max.apply(null, heights);
 
-      for (var l = 0; l < works.length; l++) {
-        works[l].style.height = maxHeight + 'px';
-      }
-    }
+      row.forEach(function(column) {
+        column.style.height = maxHeight + 'px';
+        column.className += ' js-show';
+      });
+    });
 
   };
   return grid;

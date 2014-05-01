@@ -20,7 +20,7 @@ description: I’m a front-end developer and versatile digital artist. I’m int
 <section class="u-row">
   <ul class="Grid Grid--gutter">
     {% for post in site.posts %}
-      <li class="Grid-item Work smaller-u-sizeOneHalf medium-u-sizeOneThird large-u-sizeOneFourth larger-u-sizeOneFifth">
+      <li class="Grid-item Work smaller-u-sizeOneHalf medium-u-sizeOneThird large-u-sizeOneFourth larger-u-sizeOneFifth js-grid">
         {% if post.picture %}
           <img class="Work-thumbnail js-rhythm" src="{{ site.url }}/images/{{ post.picture }}" alt="{{ post.title }}">
         {% else %}
