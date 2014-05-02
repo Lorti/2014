@@ -34,3 +34,12 @@
 .Work-title {
   margin-top: $baseLineHeight;
 }
+.Work-link {
+  margin-bottom: 0;
+  &:nth-child(n+2) { margin-top: 0; }
+  [class^="icon-"] {
+    margin-left: .5em;
+    color: $pureOrange;
+    font-size: .75em;
+  }
+}

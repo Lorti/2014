@@ -32,9 +32,11 @@ description: I’m a front-end developer and versatile digital artist. I’m int
         {% if post.article %}
           <p><a href="{{ post.url }}">{{ post.url }}</a></p>
         {% endif %}
-        {% if post.link %}
-          <p><a href="{{ post.link }}">{{ post.label }}&nbsp;›</a></p>
-        {% endif %}
+        {% for hash in post.links %}
+          {% for link in hash %}
+          <p class="Work-link"><a href="{{ link[1] }}" target="_blank">{{ link[0]] }}</a><i class="icon-link"></i></p>
+          {% endfor %}
+        {% endfor %}
       </li>
     {% endfor %}
   </ul>
