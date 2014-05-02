@@ -2,7 +2,7 @@
     $SCROLLER
 \*------------------------------------*/
 
-define('modules/scroller', ['jquery', 'domReady!'], function($) {
+define('modules/scroller', ['jquery'], function($) {
 
   $('a[href^=#]').on('click', function(e) {
     e.preventDefault();

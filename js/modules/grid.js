@@ -2,7 +2,7 @@
     $GRID
 \*------------------------------------*/
 
-define('modules/grid', ['domReady!'], function() {
+define('modules/grid', function() {
 
   var grid = function() {
     var works = document.getElementsByClassName('js-grid'),

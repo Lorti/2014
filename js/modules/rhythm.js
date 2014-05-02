@@ -2,7 +2,7 @@
     $RHYTHM
 \*------------------------------------*/
 
-define('modules/rhythm', ['domReady!'], function() {
+define('modules/rhythm', function() {
 
   var rhythm = function() {
     var lineHeight = window.getComputedStyle(document.body).lineHeight,

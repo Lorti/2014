@@ -17,16 +17,18 @@ curl([
     'modules/grid',
     'modules/rhythm',
     'modules/svg',
+    'domReady!'
   ]).then(
   function(baseliner, grid, rhythm, svg) {
     if (debug) { new baseliner(12); }
+    window.addEventListener('load', function() {
+      grid();
+      rhythm();
+    });
     window.addEventListener('resize', function() {
       rhythm();
       grid();
     });
-    var e = document.createEvent('UIEvents');
-    e.initUIEvent('resize', true, false, window, 0);
-    window.dispatchEvent(e);
   },
   function() {
     console.log('Oh dear, something went wrong!');

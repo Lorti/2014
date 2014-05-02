@@ -2,7 +2,7 @@
     $SVG
 \*------------------------------------*/
 
-define('modules/svg', ['domReady!'], function() {
+define('modules/svg', function() {
 
   if (!Modernizr.svg) {
     var images = document.getElementsByTagName('img');
