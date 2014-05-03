@@ -10,6 +10,9 @@
   box-sizing: border-box;
 }
 
+.js body { visibility: hidden; }
+.loaded body { visibility: visible; }
+
 @import "variables";
 @import "functions";
 @import "mixins";

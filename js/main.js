@@ -21,14 +21,15 @@ curl([
   ]).then(
   function(baseliner, grid, rhythm, svg) {
     if (debug) { new baseliner(12); }
-    window.addEventListener('load', function() {
-      grid();
-      rhythm();
-    });
-    window.addEventListener('resize', function() {
+    var layout = function() {
       rhythm();
       grid();
-    });
+      if (!/loaded/.test(document.documentElement.className)) {
+        document.documentElement.className += ' loaded';
+      }
+    }
+    window.addEventListener('load', layout);
+    window.addEventListener('resize', layout);
   },
   function() {
     console.log('Oh dear, something went wrong!');
