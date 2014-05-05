@@ -24,11 +24,10 @@ module.exports = function (grunt) {
     concat: {
       target: {
         src: [
-          'js/main.js',
-          'js/modules/baseliner.js',
           'js/modules/grid.js',
           'js/modules/rhythm.js',
-          'js/modules/svg.js'
+          'js/modules/svg.js',
+          'js/main.js'
         ],
         dest: '_site/js/main.js'
       }

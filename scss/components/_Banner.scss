@@ -7,31 +7,20 @@
  *     <img src="{{logo}}.svg">
  *     <img src="{{logo}}.png">
  *   </div>
- *   <h1 class="Banner-heading">{{heading}}</h1>
- *   <p class="Banner-tagline">{{tagline}}</p>
+ *   <div class="Banner-text">
+ *    <h1 class="Banner-text-heading">{{heading}}</h1>
+ *    <p class="Banner-text-tagline">{{tagline}}</p>
+ *   </div>
  * </div>
  */
 
 .Banner { 
   font-size: .75rem; 
+  display: table;
   @include breakpoint("medium") { font-size: $baseFontSize; }
 }
 
-.Banner-heading {
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: relativeFontSize(4);
-  line-height: relativeLineHeight(2.5, 4);
-  margin-top: relativeLineHeight(1, 4);
-  margin-bottom: relativeLineHeight(1, 4);
-}
-
-.Banner-tagline {
-  margin-top: relativeLineHeight(-1.5);
-}
-
 .Banner-logo {
-  float: left;
   line-height: relativeLineHeight(2.5);
   img {
     vertical-align: middle;
@@ -39,4 +28,23 @@
     width: relativeLineHeight(3.5);
     height: relativeLineHeight(3.5) / $logoAspectRatio;
   }
+}
+
+.Banner-logo,
+.Banner-text {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.Banner-text-heading {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: relativeFontSize(4);
+  line-height: relativeLineHeight(2.5, 4);
+  margin-top: 0;
+  margin-bottom: relativeLineHeight(1, 4);
+}
+
+.Banner-text-tagline {
+  margin-top: relativeLineHeight(-1.5);
 }
