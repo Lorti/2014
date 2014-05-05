@@ -5,7 +5,9 @@
 /**
  * http://jstarrdewar.com/blog/2013/02/28/use-uglify-to-automatically-strip-debug-messages-from-your-javascript/
  */
-if (typeof debug === 'undefined') { debug = true; }
+if (typeof debug === 'undefined') { 
+  debug = true; 
+}
 
 curl.config({
   baseUrl: '/js',
@@ -13,14 +15,12 @@ curl.config({
 });
 
 curl([
-    'modules/baseliner',
     'modules/grid',
     'modules/rhythm',
     'modules/svg',
     'domReady!'
   ]).then(
-  function(baseliner, grid, rhythm, svg) {
-    if (debug) { new baseliner(12); }
+  function(grid, rhythm, svg) {
     var layout = function() {
       rhythm();
       grid();
