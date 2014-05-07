@@ -1,13 +1,17 @@
 
 # GENERATED
+
 .sass-cache
 _site
 node_modules
 *.map
 
 # PRIVATE
-ai
-psd
+
+*.ai
+*.psd
+*.aco
+*.ase
 *.sublime-project
 *.sublime-workspace
 *.zip

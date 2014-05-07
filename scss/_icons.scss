@@ -26,16 +26,42 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-multiple-professions:before { content: "\e606"; }
-.icon-wide-range-of-skills:before { content: "\e609"; }
-.icon-available-for-hire:before   { content: "\e600"; }
-
-.icon-facebook:before             { content: "\e601"; }
-.icon-forward:before              { content: "\e602"; }
-.icon-github:before               { content: "\e603"; }
-.icon-google:before               { content: "\e604"; }
-.icon-link:before                 { content: "\e60b"; }
-.icon-mail:before                 { content: "\e605"; }
-.icon-skype:before                { content: "\e607"; }
-.icon-twitter:before              { content: "\e608"; }
-.icon-xing:before                 { content: "\e60a"; }
+.icon-arrow:before {
+  content: "\e600";
+}
+.icon-available-for-hire:before {
+  content: "\e602";
+}
+.icon-facebook:before {
+  content: "\e603";
+}
+.icon-forward:before {
+  content: "\e604";
+}
+.icon-github:before {
+  content: "\e605";
+}
+.icon-google:before {
+  content: "\e606";
+}
+.icon-link:before {
+  content: "\e607";
+}
+.icon-mail:before {
+  content: "\e601";
+}
+.icon-multiple-professions:before {
+  content: "\e608";
+}
+.icon-skype:before {
+  content: "\e609";
+}
+.icon-twitter:before {
+  content: "\e60a";
+}
+.icon-wide-range-of-skills:before {
+  content: "\e60b";
+}
+.icon-xing:before {
+  content: "\e60c";
+}
