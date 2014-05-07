@@ -15,7 +15,7 @@
   padding-bottom: $baseLineHeight;
   list-style: none;
   p { @extend %styledParagraph; }
-  :last-child { margin-bottom: 0; }
+  & > :last-child { margin-bottom: 0; }
 }
 
 .Work-thumbnail {
@@ -38,7 +38,6 @@
   margin-bottom: 0;
   &:nth-child(n+2) { margin-top: 0; }
   [class^="icon-"] {
-    margin-left: .25em;
-    vertical-align: -.15em;
+    vertical-align: middle;
   }
 }
