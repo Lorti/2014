@@ -38,8 +38,7 @@
   margin-bottom: 0;
   &:nth-child(n+2) { margin-top: 0; }
   [class^="icon-"] {
-    margin-left: .125em;
-    font-size: .75em;
-    vertical-align: -.025em;
+    margin-left: .25em;
+    vertical-align: -.15em;
   }
 }
