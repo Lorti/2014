@@ -14,9 +14,10 @@
  * </div>
  */
 
-.Banner { 
-  font-size: .75rem; 
+.Banner {
   display: table;
+  margin-bottom: relativeLineHeight(1.5);
+  font-size: .75rem;
   @include breakpoint("medium") { font-size: $baseFontSize; }
 }
 
@@ -26,7 +27,7 @@
     vertical-align: middle;
     margin-right: relativeLineHeight(0.5);
     width: relativeLineHeight(3.5);
-    height: relativeLineHeight(3.5) / $logoAspectRatio;
+    height: (relativeLineHeight(3.5) / $logoAspectRatio);
   }
 }
 
@@ -47,4 +48,5 @@
 
 .Banner-text-tagline {
   margin-top: relativeLineHeight(-1.5);
+  margin-bottom: 0;
 }

@@ -55,4 +55,8 @@
   padding-top: $baseLineHeight;
   padding-bottom: $baseLineHeight;
   background-color: darken($textColor, 5%);
+  a {
+    color: inherit;
+    text-decoration: underline;
+  }
 }

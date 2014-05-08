@@ -50,8 +50,7 @@ a:visited {
 }
 a:hover,
 a:active {
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
+  color: desaturate($pureOrange, 100%);
 }
 
 strong { font-weight: bold; }
