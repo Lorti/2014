@@ -5,8 +5,8 @@
 /**
  * http://jstarrdewar.com/blog/2013/02/28/use-uglify-to-automatically-strip-debug-messages-from-your-javascript/
  */
-if (typeof debug === 'undefined') { 
-  debug = true; 
+if (typeof debug === 'undefined') {
+  debug = true;
 }
 
 curl.config({
@@ -24,11 +24,11 @@ curl([
     var layout = function() {
       rhythm();
       grid();
-      if (!/loaded/.test(document.documentElement.className)) {
-        document.documentElement.className += ' loaded';
+      if (!/ready/.test(document.documentElement.className)) {
+        document.documentElement.className += ' ready';
       }
     }
-    window.addEventListener('load', layout);
+    layout();
     window.addEventListener('resize', layout);
   },
   function() {

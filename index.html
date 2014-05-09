@@ -21,11 +21,9 @@ description: I’m a front-end developer and versatile digital artist. I’m int
   <ul class="Grid Grid--gutter">
     {% for post in site.posts %}
       <li class="Grid-item Work smaller-u-sizeOneHalf medium-u-sizeOneThird large-u-sizeOneFourth larger-u-sizeOneFifth js-grid">
-        {% if post.picture %}
-          <img class="Work-thumbnail js-rhythm" src="{{ site.url }}/images/{{ post.picture }}" alt="{{ post.title }}">
-        {% else %}
-          <img class="Work-thumbnail js-rhythm" src="http://placehold.it/450x300" alt="{{ post.title }}">
-        {% endif %}
+        <div class="Work-thumbnail js-rhythm">
+          <img src="{{ site.url }}/images/{{ post.picture }}" alt="{{ post.title }}">
+        </div>
         <!-- <p class="Work-category">{{ post.categories }}</p> -->
         <h2 class="Work-title">{{ post.title }}</h2>
         <p class="Work-excerpt">{{ post.excerpt | remove: '<p>' | remove: '</p>' }}</p>

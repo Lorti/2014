@@ -11,7 +11,7 @@
 }
 
 .js body { visibility: hidden; }
-.loaded body { visibility: visible; }
+.ready body { visibility: visible; }
 
 @import "variables";
 @import "functions";
