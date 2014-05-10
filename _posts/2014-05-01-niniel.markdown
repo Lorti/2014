@@ -7,7 +7,7 @@ categories: Digital Art
 article: false
 picture: niniel.jpg
 links:
-  - Open in Unity Asset Store: https://www.assetstore.unity3d.com/
+  - Open in Unity Asset Store: https://www.assetstore.unity3d.com/#/content/17728
 ---
 
 When a friend needed a weapon for his first-person adventure prototype I created Níniel. At first I just wanted to sculpt an elven bow with carvings in my spare time, but then I decided to create a real game model that may benefit other developers as well. Therefore it is now available for free on the Unity Asset Store.
