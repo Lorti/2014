@@ -6,6 +6,8 @@ categories: Digital Art
 
 article: false
 picture: croupiere.jpg
+links:
+  - View in WebGL 3D Model Viewer: /files/croupiere.html
 ---
 
-Similique, illum, nostrum saepe perspiciatis repudiandae voluptas asperiores error sunt fugit soluta laborum officiis commodi reiciendis nam libero eveniet modi necessitatibus delectus repellendus atque eos dolorum pariatur molestiae porro natus. Eius, modi, beatae, ex dignissimos reprehenderit itaque enim quod illo facilis dolorum deleniti atque sequi.
+The first chapter of an unfinished game that blends space opera and noir fiction takes places on a casino cruiser filled with illustrious guests, shady syndicate members and gorgeous personnel. Small textures and extremely low-poly characters were chosen to enable vast environments, large simulated crowds and a strong focus on narrative and atmosphere.
