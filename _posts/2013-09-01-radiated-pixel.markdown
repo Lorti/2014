@@ -10,4 +10,4 @@ links:
   - View Website: http://www.radiatedpixel.com/wordpress/2013/03/27/webgl-3d-model-viewer-using-three-js/
 ---
 
-Similique, illum, nostrum saepe perspiciatis repudiandae voluptas asperiores error sunt fugit soluta laborum officiis commodi reiciendis nam libero eveniet modi necessitatibus delectus repellendus atque eos dolorum pariatur molestiae porro natus. Eius, modi, beatae, ex dignissimos reprehenderit itaque enim quod illo facilis dolorum deleniti atque sequi.
+Radiated Pixel is a collective of nerds and geeks with a strong interest in games, media, art and technology. People who do not simply enjoy, but also create works in these fields, both professional and in their spare time. Their blog serves as a general platform to showcase their works and for reaching people with similar interests.
