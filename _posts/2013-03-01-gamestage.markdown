@@ -7,7 +7,8 @@ categories: Website
 article: false
 picture: gamestage.jpg
 links:
-  - View Website: http://gamestage.radiatedpixel.com/the-good-the-bad-and-the-bloody/
+  - View Festival Website: http://gsexpo.radiatedpixel.com/
+  - View Official Website: http://gamestage.radiatedpixel.com/the-good-the-bad-and-the-bloody/
 ---
 
-Similique, illum, nostrum saepe perspiciatis repudiandae voluptas asperiores error sunt fugit soluta laborum officiis commodi reiciendis nam libero eveniet modi necessitatibus delectus repellendus atque eos dolorum pariatur molestiae porro natus. Eius, modi, beatae, ex dignissimos reprehenderit itaque enim quod illo facilis dolorum deleniti atque sequi.
+GameStage@AEC provides a regular networking opportunity for all who are interested in computer games. Talks by experts, prototype presentations and of course playing games are at the heart of the program. I’m part of the organization and maintain the official website as well as the microsites for special occasions.
