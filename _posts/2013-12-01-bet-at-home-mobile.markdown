@@ -5,7 +5,7 @@ date: 2013-12-01 12:00
 categories: Website
 
 article: false
-picture: mobile.jpg
+picture: bet-at-home-mobile.jpg
 links:
   - View Website: https://www.bet-at-home.com/mobile/
 ---
