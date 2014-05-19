@@ -29,6 +29,9 @@
     height: 100%;
   }
 }
+.Work-thumbnail--framed {
+  box-shadow: 0 3px 7px rgba(desaturate($pureOrange, 100%), .25);
+}
 .Work-category {
   margin-top: 0;
   margin-bottom: -$baseLineHeight;
