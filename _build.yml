@@ -1,6 +1,6 @@
 encoding:    UTF-8
 name:        'Manuel Wieser – Front-End Developer & Digital Artist'
-url:         http://private.manuelwieser.com/redesign
+url:         http://www.manuelwieser.com
 markdown:    kramdown
 pygments:    false
 permalink:   /:title.html
