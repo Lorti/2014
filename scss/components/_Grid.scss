@@ -2,7 +2,11 @@
     $GRID
 \*------------------------------------*/
 /**
- * <div class="Grid"></div>
+ * <div class="Grid">
+ *   <div class="Grid-item">
+ *     …
+ *   </div>
+ * </div>
  */
 
 
@@ -22,6 +26,7 @@
 
 .Grid-item {
   float: left;
+  img { width: 100%; }
 }
 
 .Grid--gutter {

@@ -1,0 +1,12 @@
+/*------------------------------------*\
+    $POST
+\*------------------------------------*/
+
+.Post {
+  h1 { margin-top: $baseLineHeight; }
+}
+
+.Post-links p {
+  @extend %styledParagraph;
+  @extend .Work-link;
+}

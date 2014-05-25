@@ -12,21 +12,21 @@ body {
   line-height: stripUnit($baseLineHeight);
 }
 
-h1, h2, h3 {
+h1, h2, h3, .h1, .h2, .h3 {
   font-family: "Oswald", sans-serif;
   font-weight: 300;
   margin-top: $baseLineHeight * 2;
   margin-bottom: $baseLineHeight;
 }
-h1 {
+h1, .h1 {
   font-size: $baseFontSize * pow($modularScale, 3);
   line-height: $baseLineHeight * 1.5;
 }
-h2 {
+h2, .h2 {
   font-size: $baseFontSize * pow($modularScale, 2);
   line-height: $baseLineHeight * 1.5;
 }
-h3 {
+h3, .h3 {
   font-size: $baseFontSize * $modularScale;
   line-height: $baseLineHeight;
 }

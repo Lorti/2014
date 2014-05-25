@@ -1,9 +1,25 @@
 ---
 layout: default
 ---
-<h2>{{ page.title }}</h2>
-<p class="meta">{{ page.date | date_to_string }}</p>
+<article class="Post u-row">
+  <div class="Grid Grid--gutter">
+    <div class="Grid-item small-u-sizeOneThird">
+      <h1>{{ page.title }}</h1>
 
-<div class="post">
-{{ content }}
-</div>
+      {{ content }}
+
+      <div class="Post-links">
+      {% for hash in page.links %}
+        {% for link in hash %}
+          <p><a href="{{ link[1] }}">{{ link[0]] }}&nbsp;<i class="icon-arrow"></i></a></p>
+        {% endfor %}
+      {% endfor %}        
+      </div>
+
+    </div>
+    <div class="Grid-item small-u-sizeTwoThirds">
+      <h2 class="h1 u-hidden small-u-block small-u-transparent">Pictures</h2>
+      <img src="{{ site.url }}/images/{{ page.picture }}" alt="{{ post.title }}">
+    </div>
+  </div>
+</article>

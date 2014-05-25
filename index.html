@@ -9,12 +9,6 @@ description: I’m a front-end developer and versatile digital artist. I’m int
     I make websites,<br>
     games and digital art.
   </p>
-  <!--
-  <p class="Introduction-link">
-    <a href="#contact">GET IN TOUCH</a>
-    <i class="icon-fast-forward"></i>
-  </p>
-  -->
 </section>
 
 <section class="u-row">
@@ -24,7 +18,6 @@ description: I’m a front-end developer and versatile digital artist. I’m int
         <div class="Work-thumbnail Work-thumbnail--framed js-rhythm">
           <img src="{{ site.url }}/images/{{ post.picture }}" alt="{{ post.title }}">
         </div>
-        <!-- <p class="Work-category">{{ post.categories }}</p> -->
         <h2 class="Work-title">{{ post.title }}</h2>
         <p class="Work-excerpt">{{ post.excerpt | remove: '<p>' | remove: '</p>' }}</p>
         {% if post.article %}
@@ -32,25 +25,12 @@ description: I’m a front-end developer and versatile digital artist. I’m int
         {% endif %}
         {% for hash in post.links %}
           {% for link in hash %}
-          <p class="Work-link"><a href="{{ link[1] }}">{{ link[0]] }}&nbsp;<i class="icon-arrow"></i></a></p>
+            <p class="Work-link">
+              <a href="{{ link[1] }}">{{ link[0]] }}&nbsp;<i class="icon-arrow"></i></a>
+            </p>
           {% endfor %}
         {% endfor %}
       </li>
     {% endfor %}
   </ul>
 </section>
-
-<!--
-<section>
-  <h2>Multiple professions</h2>
-  <p>
-    I’m a front-end developer and versatile digital artist. I’m into building websites and creating content for real-time rendering, film and animation. I’m also a bearded hacker making games with my friends.
-  </p>
-
-  <h2>Wide range of skills</h2>
-  <p>I speak the language of software engineers, interaction designers and creative directors alike. and Thus I can serve as an important link between teams. Being a multimedia all-rounder you can use my skills in many different fields in the pipeline and I’m eager to learn even more.</p>
-
-  <h2>Available for hire</h2>
-  <p>Yes, you can hire me to create your websites, games, and digital art. Apart from my full-time employment I do freelance work in Linz, Austria. Contact me now and we can start discussing your next project today.</p>
-</section>
--->
