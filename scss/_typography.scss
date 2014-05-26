@@ -90,7 +90,7 @@ blockquote {
  * Some paragraphs need a special styling that differs from normal text.
  */
 %styledParagraph {
-  & + & {
+  &, & + & {
     margin-top: $baseLineHeight;
     text-indent: 0;
   }

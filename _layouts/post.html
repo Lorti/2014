@@ -8,16 +8,16 @@ layout: default
 
       {{ content }}
 
-      <div class="Post-links">
+      <p class="Post-links">
       {% for hash in page.links %}
         {% for link in hash %}
-          <p><a href="{{ link[1] }}">{{ link[0]] }}&nbsp;<i class="icon-arrow"></i></a></p>
+          <a href="{{ link[1] }}">{{ link[0]] }}&nbsp;<i class="icon-arrow"></i></a><br>
         {% endfor %}
-      {% endfor %}        
-      </div>
+      {% endfor %}
+      </p>
 
     </div>
-    <div class="Grid-item small-u-sizeTwoThirds">
+    <div class="Grid-item u-sizeOneWhole small-u-sizeTwoThirds">
       <h2 class="h1 u-hidden small-u-block small-u-transparent">Pictures</h2>
       <img src="{{ site.url }}/images/{{ page.picture }}" alt="{{ post.title }}">
     </div>
