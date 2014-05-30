@@ -2,11 +2,15 @@
     $POST
 \*------------------------------------*/
 
+/**
+ * The top and bottom margin of an article should be the same.
+ */
 .Post {
+  margin-bottom: $baseLineHeight * 2.5;
   h1, .h1 { margin-top: $baseLineHeight; }
 }
 
-.Post-links {
+.Post-content-links {
   @extend %styledParagraph;
   [class^="icon-"] {
     vertical-align: middle;

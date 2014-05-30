@@ -19,9 +19,8 @@
   background-size: cover;
   color: white;
   font-size: 1rem;
-
-@include breakpoint("smaller") { margin-bottom: $baseLineHeight; }
-@include breakpoint("medium") { font-size: $baseFontSize * $modularScale; }
+  @include breakpoint("smaller") { margin-bottom: $baseLineHeight; }
+  @include breakpoint("medium") { font-size: $baseFontSize * $modularScale; }
 }
 
 .Introduction--backgroundImage {

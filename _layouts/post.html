@@ -3,12 +3,12 @@ layout: default
 ---
 <article class="Post u-row">
   <div class="Grid Grid--gutter">
-    <div class="Grid-item small-u-sizeOneThird">
+    <div class="Grid-item small-u-sizeOneHalf large-u-sizeOneThird">
       <h1>{{ page.title }}</h1>
 
       {{ content }}
 
-      <p class="Post-links">
+      <p class="Post-content-links">
       {% for hash in page.links %}
         {% for link in hash %}
           <a href="{{ link[1] }}">{{ link[0]] }}&nbsp;<i class="icon-arrow"></i></a><br>
@@ -17,9 +17,9 @@ layout: default
       </p>
 
     </div>
-    <div class="Grid-item u-sizeOneWhole small-u-sizeTwoThirds">
+    <div class="Grid-item u-sizeOneWhole small-u-sizeOneHalf large-u-sizeTwoThirds">
       <h2 class="h1 u-hidden small-u-block small-u-transparent">Pictures</h2>
-      <img src="{{ site.url }}/images/{{ page.picture }}" alt="{{ post.title }}">
+      <img class="u-block u-sizeOneWhole" src="{{ site.url }}/images/{{ page.picture }}" alt="{{ post.title }}">
     </div>
   </div>
 </article>
