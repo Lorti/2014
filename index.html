@@ -15,9 +15,9 @@ description: I’m a front-end developer and versatile digital artist. I’m int
   <ul class="Grid Grid--gutter">
     {% for post in site.posts %}
       <li class="Grid-item Work smaller-u-sizeOneHalf medium-u-sizeOneThird large-u-sizeOneFourth larger-u-sizeOneFifth js-grid">
-        <div class="Work-thumbnail Work-thumbnail--framed js-rhythm">
+        <a href="{{post.url}}" class="Work-thumbnail Work-thumbnail--framed u-block js-rhythm">
           <img src="{{ site.url }}/images/{{ post.picture }}" alt="{{ post.title }}">
-        </div>
+        </a>
         <h2 class="Work-title">{{ post.title }}</h2>
         <p class="Work-excerpt">{{ post.excerpt | remove: '<p>' | remove: '</p>' }}</p>
         {% if post.article %}

@@ -2,7 +2,10 @@
     $TYPOGRAPHY
 \*------------------------------------*/
 
-html { font-size: 100%; }
+html { 
+  font-size: 100%; 
+  @media (min-width: 2048px) { font-size: 125%; }
+}
 body {
   margin-top: $baseLineHeight;
   background: $backgroundColor;
