@@ -16,11 +16,12 @@ curl.config({
 
 curl([
     'modules/grid',
+    'modules/mailto',
     'modules/rhythm',
     'modules/svg',
     'domReady!'
   ]).then(
-  function(grid, rhythm, svg) {
+  function(grid, mailto, rhythm, svg) {
     var layout = function() {
       rhythm();
       grid();
