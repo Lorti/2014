@@ -25,6 +25,7 @@ module.exports = function (grunt) {
       target: {
         src: [
           'js/modules/grid.js',
+          'js/modules/mailto.js',
           'js/modules/rhythm.js',
           'js/modules/svg.js',
           'js/main.js'
